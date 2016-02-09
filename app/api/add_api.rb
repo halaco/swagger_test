@@ -9,7 +9,8 @@ class AddApi < Grape::API
             requires :second, type: Integer, desc: "Second Value."
         end
         get '' do
-            @add = params[:first] + params[:second]
+            sum = params[:first] + params[:second]
+            { value: sum, first: params[:first], second: params[:second]}
         end
     end
 end
