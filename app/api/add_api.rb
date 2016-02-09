@@ -13,4 +13,6 @@ class AddApi < Grape::API
             { value: sum, first: params[:first], second: params[:second]}
         end
     end
+    
+    add_swagger_documentation
 end

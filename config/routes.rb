@@ -54,4 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   mount AddApi => "/"
+  mount GrapeSwaggerRails::Engine => '/docs'
 end
