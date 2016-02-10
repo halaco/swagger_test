@@ -184,6 +184,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   grape
+  grape-entity
   grape-swagger
   grape-swagger-rails
   jbuilder (~> 2.0)
