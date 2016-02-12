@@ -1,8 +1,8 @@
 module Entities
     class Result < Grape::Entity
-        expose :value, as: 'sum'
-        expose :first
-        expose :last
+        expose :value, as: 'sum', documentation: { type: 'integer', desc: 'result.' }
+        expose :first, documentation: { type: 'integer', desc: 'first parameter.' }
+        expose :second, documentation: { type: 'integer', desc: 'second paramter.' }
     end
 end
 
@@ -11,12 +11,12 @@ class AddApi < Grape::API
         
     resource :add do
             
-        desc "Add Two Values.", entity:  Entities::Result
+        desc "Add Two Values.", entity: Entities::Result
         params do
             requires :first, type: Integer, desc: "First Value."
             requires :second, type: Integer, desc: "Second Value."
         end
-        get '' do
+        post '' do
             sum = params[:first] + params[:second]
             result = { value: sum, first: params[:first], second: params[:second]}
             present result, with: Entities::Result
