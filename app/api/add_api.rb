@@ -16,7 +16,7 @@ class AddApi < Grape::API
             requires :first, type: Integer, desc: "First Value."
             requires :second, type: Integer, desc: "Second Value."
         end
-        post '' do
+        get '' do
             sum = params[:first] + params[:second]
             result = { value: sum, first: params[:first], second: params[:second]}
             present result, with: Entities::Result
