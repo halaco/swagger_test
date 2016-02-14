@@ -1,0 +1,6 @@
+---
+oauth2:
+  type: oauth2
+  flow: accessCode
+  authorizationUrl: https://
+  tokenUrl: https://

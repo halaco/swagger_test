@@ -1,0 +1,29 @@
+---
+tags:
+- opration
+summary: Add Two Values
+description: More information will be described here
+parameters:
+- name: Authorization
+  in: header
+  description: A valid user session token, in the format 'Bearer TOKEN'
+  required: true
+  type: string
+- name: first
+  in: query
+  description: First Value.
+  required: true
+  type: integer
+- name: second
+  in: query
+  description: Second Value.
+  required: true
+  type: integer
+responses:
+  '200':
+    description: Successful result of the operation
+    schema:
+      type: object
+      "$ref": "#/definitions/Result"
+  default:
+    description: Unexpected error

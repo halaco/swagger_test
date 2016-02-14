@@ -1,0 +1,12 @@
+---
+type: object
+properties:
+  sum:
+    type: integer
+    description: result.
+  first:
+    type: integer
+    description: first parameter.
+  second:
+    type: integer
+    description: second paramter.
